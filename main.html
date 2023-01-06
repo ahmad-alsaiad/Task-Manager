@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GTD</title>
+	<link rel="stylesheet" href="main.css" />
+	<link rel="icon" type="image/x-icon" href="icon.png">
+	<script src="main.js" //defer></script>
+</head>
+<body>
+	<template id="task-template">
+		<div class="task">
+			<select class="sel"></select>
+			<button type="button" class="del">Delete</button>
+		</div>
+	</template>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Getting Things Done</h2>
+			<ul>
+				<!-- <li onclick="showCategory(event)"><button type="button" class="color" data-category="do">Captures</button></li> -->
+				<li onclick="showCategory(event)"><button type="button" class="colorcap selected" data-category="captures" >Captures</button></li>
+				<li onclick="showCategory(event)"><button type="button" class="colordo" data-category="do">Do It Now</a></li>
+				<li onclick="showCategory(event)"><button type="button" class="colordo" data-category="delegate">Delegate</button></li>
+				<li onclick="showCategory(event)"><button type="button" class="colordo" data-category="calender">Calender</button></li>
+				<li onclick="showCategory(event)"><button type="button" class="colordo" data-category="projects">Projects Incubator</button></li>
+				<li onclick="showCategory(event)"><button type="button" class="colordo" data-category="some">Some Day</button></li>
+				<li onclick="showCategory(event)"><button type="button" class="colorref" data-category="reference">Reference</button></li>
+				<li onclick="showCategory(event)"><button type="button" class="colorref" data-category="archive">Archive</button></li>
+			</ul>
+		</div>
+		<main>
+			<div class="container">
+				<form id="add-task-form">
+					<input type="text" class="input" />
+					<input type="submit" class="add" value="Add Task" />
+				</form>
+				<div class="tasks">
+				</div>
+			</div>
+			<section class="task-list">
+				<h2>Tasks</h2>
+				<div id="tasks">
+				</div>
+			</section>
+		</main>
+</body>
+</html>
